@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<?php
+session_start();
+if (@!$_SESSION['usuario']) {
+  header("Location:index.php");
+}elseif ($_SESSION['nro_cabina']>=1) {
+  header("Location:index2.php");
+}
+?>
 <html>
 <script>
 function recarga(){
@@ -153,7 +162,7 @@ setInterval('recarga()',200000)
               }
     </style>
     <footer>
-      <p>© Wilmer Padilla &copy; Copyright derechos reservados  Wilmer Padilla 2016-2017 telf: 04269242004 correo: wilmerpadilla.1994@gmail.com</p>
+      <p>SERP</p>
     </footer>
     <!-- Placed at the end of the document so the pages load faster -->
 

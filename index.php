@@ -16,7 +16,7 @@
       <input type="text" name="user" placeholder="Usuario"/>
       <input type="password" name="pass" placeholder="Contraseña"/>
       <input style="background-color: #3a9642" class="btn btn-info" type="submit" value="Aceptar">
-      <p class="message">INTTEC <br> inspreccion de tuberias</p>
+      <p class="message">SERP</p>
     </form>
   </div>
 </div>

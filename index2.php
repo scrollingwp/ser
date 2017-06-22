@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<?php
+session_start();
+if (@!$_SESSION['usuario']) {
+  header("Location:index.php");
+}elseif ($_SESSION['nro_cabina']==10) {
+  header("Location:index2.php");
+}
+?>
 <html>
 <head>
         <meta charset="utf-8">
@@ -156,7 +164,7 @@
               }
         </style>
         <footer style="">
-            <p>&copy; Copyright derechos reservados  Wilmer Padilla 2016-2017 telf: 04269242004 correo: wilmerpadilla.1994@gmail.com</p>
+            <p>SERP</p>
         </footer>
 
 

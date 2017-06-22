@@ -51,7 +51,7 @@ echo "</table>";
                 }
       </style>
       <footer style="">
-          <p>&copy; Copyright derechos reservados  Wilmer Padilla 2016-2017 telf: 04269242004 correo: wilmerpadilla.1994@gmail.com</p>
+          <p>SERP</p>
       </footer>
 </body>
 

@@ -80,3 +80,5 @@ if (@!$_SESSION['usuario']) {
 
 		</div>
 		<br/>
+	</body>
+</html>
