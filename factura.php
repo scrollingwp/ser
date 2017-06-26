@@ -30,8 +30,13 @@ if ($valor==12) {
   while($arreglos=mysqli_fetch_array($query2)){
       $cabinas=$arreglos[0];
       $estado=$arreglos[1];
-      echo $estado;
   }
+  $sql3=("SELECT MAX(id_registro) FROM registro");
+  $query3=mysqli_query($mysqli,$sql3);
+  while($arregloss=mysqli_fetch_array($query3)){
+      $facturero=$arregloss[0];
+  }
+
   $sumar= $estado+$tarifa;
   $sentencia="UPDATE cabina SET numero='$cabina', estado ='$sumar'  WHERE numero = '$cabina'";
   $resent=mysqli_query($mysqli,$sentencia);
@@ -56,7 +61,7 @@ if ($valor==12) {
              }
          </script>
      </head>
-     <body >
+     <body onload="window.print()">
          <CENTER><H6>GOBIERNO BOLIVARIANO DE VENEZUELA<br>
            GOBERNACIÓN BOLIVARIANA DEL ZULIA<br>
            (SERVIALEZ)<br>
@@ -68,9 +73,9 @@ if ($valor==12) {
            HORA
            CABINA
             MONTO<br>
-           00000000
-            <?php $fecha= date ("j/n/Y"); echo $fecha; ?>
-            <?php $hora= date ("h:i:s"); echo $hora; ?>
+          <?php echo $facturero  ?>
+            <?php  $fecha= date ("j/n/Y"); echo $fecha; ?>
+            <?php date_default_timezone_set('America/Caracas'); $hora= date ("G:i:s" ,time()-3600); echo $hora; ?>
            <?php echo $cabina ?>     Bsf.<?php echo $tarifa ?><br>
             <?php echo $nombre ?><br>
            CAJERO:<?php echo $_SESSION['usuario'];?><br>

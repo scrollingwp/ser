@@ -132,7 +132,7 @@ setInterval('recarga()',200000)
                  <?php
 
         require("connect_db.php");
-        $sql=("SELECT * FROM cabina");
+        $sql=("SELECT * FROM cabina WHERE numero>0");
 
 //la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
         $query=mysqli_query($mysqli,$sql);

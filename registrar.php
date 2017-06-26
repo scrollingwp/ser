@@ -14,14 +14,16 @@
 
     <div style="padding-bottom: 40px"></div>
     <form name="formu" method="post" action="registro.php" class="login-form">
+      <input type="text" name="cedula" placeholder="Cedula"/>
       <input type="text" name="realname" placeholder="Nombre"/>
-      <input type="text" name="nick" placeholder="Correo"/>
+      <input type="text" name="lastname" placeholder="Apellido"/>
+      <input type="text" name="nick" placeholder="Usuario"/>
       <input type="password" name="pass" placeholder="Contraseña"/>
       <input type="password" name="rpass" placeholder="Repetir contraseña"/>
       <input id="ejec" style="background-color: #3a9642"  class="btn btn-danger" type="submit" name="submit" value="Registrarse"/>
     </form>
-   
-    
+
+
   </div>
 </div>
 

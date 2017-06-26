@@ -17,18 +17,17 @@
 
   <?php
       require("connect_db.php");
-     $sql=("SELECT * FROM persona");
+     $sql=("SELECT * FROM persona WHERE nro_cabina>0");
 
 //la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
 $query=mysqli_query($mysqli,$sql);
 
 echo "<table border='1'; class='table table-hover';>";
 echo "<tr class='warning'>";
-  echo "<td>Id</td>";
-  echo "<td>Usaurio</td>";
-  echo "<td>Password</td>";
-  echo "<td>Correo</td>";
-  echo "<td>Contraseña</td>";
+  echo "<td>Cedula</td>";
+  echo "<td>Nombre</td>";
+  echo "<td>Apellido</td>";
+  echo "<td>Usuario</td>";
   echo "<td>cabina</td>";
   echo "<td>Editar</td>";
   echo "<td>Borrar</td>";
@@ -40,7 +39,6 @@ while($arreglo=mysqli_fetch_array($query)){
     echo "<td>$arreglo[1]</td>";
     echo "<td>$arreglo[2]</td>";
     echo "<td>$arreglo[3]</td>";
-    echo "<td>$arreglo[4]</td>";
     echo "<td>$arreglo[5]</td>";
 
     echo "<td><a href='actualizar.php?id=$arreglo[0]'><img src='images/actualizar.gif' class='img-rounded'></td>";
@@ -51,7 +49,7 @@ echo "</tr>";
 echo "</table>";
 extract($_GET);
 if(@$idborrar==2){
-  $sqlborrar="DELETE FROM persona WHERE cedula=$id";
+  $sqlborrar="DELETE FROM persona WHERE cedula=$cedula";
   $resborrar=mysqli_query($mysqli,$sqlborrar);
   echo '<script>alert("REGISTRO ELIMINADO")</script> ';
   echo "<script>location.href='admin.php'</script>";
