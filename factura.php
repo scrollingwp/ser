@@ -19,7 +19,7 @@ while($arreglo=mysqli_fetch_array($query)){
 $fecha= date ("Y/n/j");
 $hora= date ("h:i:s");
 if ($valor==12) {
- echo '<script>alert("Exento realizado")</script>';
+  echo "<script>location.href='generar_exento.php'</script>";
 }else {
  //la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
  				mysqli_query($mysqli,"INSERT INTO registro VALUES('','$id','$recaudador','$cabina','$fecha','$hora')");

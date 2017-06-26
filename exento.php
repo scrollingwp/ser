@@ -20,7 +20,7 @@
     <?php
 
         require("connect_db.php");
-        $sql=("SELECT * FROM cierre");
+        $sql=("SELECT * FROM registro_exento");
 
 //la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
         $query=mysqli_query($mysqli,$sql);
@@ -28,14 +28,14 @@
         echo "<table border='1'; class='table table-hover';>";
           echo "<tr class='warning'>";
             echo "<td>Id</td>";
-            echo "<td>nombre</td>";
+            echo "<td>placa</td>";
 
           echo "</tr>";
 
          while($arreglo=mysqli_fetch_array($query)){
             echo "<tr class='success'>";
-              echo "<td>$arreglo[0]</td>";
               echo "<td>$arreglo[1]</td>";
+              echo "<td>$arreglo[2]</td>";
 
 
           echo "</tr>";
