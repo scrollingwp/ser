@@ -26,8 +26,17 @@ $recaudador=$_SESSION['cedula'];
     <div class="row-fluid">
       <h4>Cierre de las cabinas</h4>
     <?php
+      require("connect_db.php");
+    $fecha= date ("Y/n/j");
+    $hora= date ("h:i:s");
+    $sql2=("SELECT * FROM cabina WHERE numero=$cabina");
+    $query2=mysqli_query($mysqli,$sql2);
+    while($arreglos=mysqli_fetch_array($query2)){
+        $cabinas=$arreglos[0];
+        $estado=$arreglos[1];
+    }
+mysqli_query($mysqli,"INSERT INTO cierre VALUES('','$cabina','$recaudador','$fecha','$hora','$estado','0')");
 
-        require("connect_db.php");
         $sql=("SELECT * FROM cierre");
 
 //la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
@@ -50,15 +59,8 @@ $recaudador=$_SESSION['cedula'];
 
           echo "</tr>";
         }
-        $fecha= date ("Y/n/j");
-        $hora= date ("h:i:s");
-        $sql2=("SELECT * FROM cabina WHERE numero=$cabina");
-        $query2=mysqli_query($mysqli,$sql2);
-        while($arreglos=mysqli_fetch_array($query2)){
-            $cabinas=$arreglos[0];
-            $estado=$arreglos[1];
-        }
-        mysqli_query($mysqli,"INSERT INTO cierre VALUES('','$cabina','$recaudador','$fecha','$hora','$estado','0')");
+
+
         	$sentencia="UPDATE cabina SET estado='0' WHERE numero='$cabina'";
         	//la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
         	$resent=mysqli_query($mysqli,$sentencia);

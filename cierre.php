@@ -29,8 +29,7 @@
             echo "<td>fecha</td>";
             echo "<td>hora</td>";
             echo "<td>cierre</td>";
-            echo "<td>declarado</td>";
-            echo "<td>diferencia</td>";
+  //          echo "<td>declarado</td>";
           echo "</tr>";
 
          while($arreglo=mysqli_fetch_array($query)){
@@ -40,9 +39,7 @@
               echo "<td>$arreglo[3]</td>";
               echo "<td>$arreglo[4]</td>";
               echo "<td>$arreglo[5]</td>";
-              echo "<td>$arreglo[6]</td>";
-              $diferencia=($arreglo[5]-$arreglo[6]);
-              echo "<td>$diferencia</td>";
+        //      echo "<td>$arreglo[6]</td>";
 
           echo "</tr>";
         }

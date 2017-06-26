@@ -27,8 +27,11 @@
 
         echo "<table border='1'; class='table table-hover';>";
           echo "<tr class='warning'>";
-            echo "<td>Id</td>";
+            echo "<td>Tipo</td>";
             echo "<td>placa</td>";
+            echo "<td>Recaudador</td>";
+            echo "<td>Cabina</td>";
+
 
           echo "</tr>";
 
@@ -36,6 +39,8 @@
             echo "<tr class='success'>";
               echo "<td>$arreglo[1]</td>";
               echo "<td>$arreglo[2]</td>";
+              echo "<td>$arreglo[3]</td>";
+              echo "<td>$arreglo[4]</td>";
 
 
           echo "</tr>";
