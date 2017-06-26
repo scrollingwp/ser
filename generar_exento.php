@@ -16,7 +16,7 @@
     <form name="formu" method="post" action="registro_exento.php" class="login-form">
       <input type="text" name="exento" placeholder="Nombre exento"/>
       <input type="text" name="placa" placeholder="Placa"/>
-      <input id="ejec" style="background-color: #3a9642"  class="btn btn-danger" type="submit" name="submit" value="Registrarse"/>
+      <input id="ejec" style="background-color: #3a9642"  class="btn btn-danger" type="submit" name="submit" value="Generar"/>
     </form>
 
 

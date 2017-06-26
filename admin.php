@@ -53,8 +53,9 @@ setInterval('recarga()',200000)
           <h3 class="text-center" style="padding-bottom: 20px; border-bottom: 2px solid #c64949">Administración</h3>
           <div style="margin-bottom: 40px;" class="col-md-12">
               <div class="text-center">
-             <label class="">Desde:</label> <input class="" type="date" name="Desde">
-              <label class="">Hasta:</label> <input class="" type="date" name="Hasta">
+                  <form class="" action="consultar_reporte_total.php" method="post">
+             <label class="">Desde:</label> <input class="" type="date" name="fecha_desde">
+              <label class="">Hasta:</label> <input class="" type="date" name="fecha_hasta">
               </div>
           </div>
           <div class="">
@@ -72,7 +73,7 @@ setInterval('recarga()',200000)
                     <a style="width: 300px" class="btn btn-default " href="cierre.php" >Cierres </a>
                   </div>
                   <div class="bor">
-                      <a style="width: 300px" class="btn btn-default " href="reporte_total.php" >Reporte Total </a>
+                      <button style="width: 300px" class="btn btn-default ">Reporte Total </a>
                   </div>
                 </div>
               </div>
@@ -164,7 +165,8 @@ setInterval('recarga()',200000)
       </div>
                 <!--FIN del estado actual de las cabinas-->
               </div>
-            <button class="btn btn-default col-md-12">Consultar</button>
+              </form>
+
           </div>
 
 
