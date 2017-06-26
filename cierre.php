@@ -3,11 +3,8 @@
   <meta charset="utf-8">
   <title>SERP</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="Joseph Godoy">
 
   <link href="bootstrap/css/bootstrap.css" rel="stylesheet"/>
-
   <link rel="shortcut icon" href="assets/ico/favicon.ico">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
@@ -18,7 +15,7 @@
 <h4>Cierre de las cabinas</h4>
     <div class="row-fluid">
     <?php
-
+      $diferencia;
         require("connect_db.php");
         $sql=("SELECT * FROM cierre");
 
@@ -33,6 +30,7 @@
             echo "<td>hora</td>";
             echo "<td>cierre</td>";
             echo "<td>declarado</td>";
+            echo "<td>diferencia</td>";
           echo "</tr>";
 
          while($arreglo=mysqli_fetch_array($query)){
@@ -43,17 +41,12 @@
               echo "<td>$arreglo[4]</td>";
               echo "<td>$arreglo[5]</td>";
               echo "<td>$arreglo[6]</td>";
+              $diferencia=($arreglo[5]-$arreglo[6]);
+              echo "<td>$diferencia</td>";
 
           echo "</tr>";
         }
-        echo "</table>";
-          extract($_GET);
-          if(@$idborrar==2){
-            $sqlborrar="DELETE FROM persona WHERE id=$id";
-            $resborrar=mysqli_query($mysqli,$sqlborrar);
-            echo '<script>alert("REGISTRO ELIMINADO")</script> ';
-            echo "<script>location.href='admin.php'</script>";
-          }
+
 
       ?>
     </div><!--FIN del estado actual de las cabinas-->

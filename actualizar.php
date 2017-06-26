@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<?php
+<!--?php
 session_start();
 if (@!$_SESSION['usuario']) {
 	header("Location:index.php");
 }
-?>
+?-->
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -94,8 +94,6 @@ if (@!$_SESSION['usuario']) {
 				cedula<br><input type="text" name="id" value= "<?php echo $id ?>" readonly="readonly"><br>
 				nombre<br><input type="text" name="nombre" value= "<?php echo $nombre ?>" ><br>
 				Apellido<br><input type="text" name="apellido" value= "<?php echo $apellido ?>"><br>
-				Usuario<br> <input type="text" name="usuario" value="<?php echo $usuario?>"><br>
-				clave usuario<br> <input type="text" name="pass" value="<?php echo $pass?>"><br>
 				cabina<br> <input type="text" name="cabina" value="<?php echo $cabina?>"><br>
 
 				<br>

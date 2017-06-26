@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+session_start();
+$cabina=$_SESSION['nro_cabina'];
+$recaudador=$_SESSION['cedula'];
+ ?>
 
 <html>
 <head>
@@ -16,7 +21,7 @@
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
 </head>
-<body onload="window.print()">
+<body >
 
     <div class="row-fluid">
       <h4>Cierre de las cabinas</h4>
@@ -45,6 +50,19 @@
 
           echo "</tr>";
         }
+        $fecha= date ("Y/n/j");
+        $hora= date ("h:i:s");
+        $sql2=("SELECT * FROM cabina WHERE numero=$cabina");
+        $query2=mysqli_query($mysqli,$sql2);
+        while($arreglos=mysqli_fetch_array($query2)){
+            $cabinas=$arreglos[0];
+            $estado=$arreglos[1];
+        }
+        mysqli_query($mysqli,"INSERT INTO cierre VALUES('','$cabina','$recaudador','$fecha','$hora','$estado','0')");
+        	$sentencia="UPDATE cabina SET estado='0' WHERE numero='$cabina'";
+        	//la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
+        	$resent=mysqli_query($mysqli,$sentencia);
+
         ?>
    </table>
    </tfooter>

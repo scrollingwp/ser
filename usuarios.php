@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Wilmer Padilla">
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="bootstrap/js/jqueryn.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="css2/botones.css">
   </head>
   <body style="background: #e0e0e0">
@@ -69,7 +68,7 @@ if(@$idborrar==2){
                 }
       </style>
       <footer style="">
-          <p>&copy; Copyright derechos reservados  Wilmer Padilla 2016-2017 telf: 04269242004 correo: wilmerpadilla.1994@gmail.com</p>
+          <p>SERP</p>
       </footer>
 </body>
 

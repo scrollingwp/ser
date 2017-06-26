@@ -11,29 +11,32 @@ if (@!$_SESSION['usuario']) {
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="bootstrap/js/jqueryn.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="css2/sty.css">
     </head>
     <body style="background: #e0e0e0">
-
+            <div  class="container-fluid">
+            <div class="row">
+            <div class="col-md-12">
          <div id="carousel-example" data-interval="5000" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="item active">
-          <img src="images\index2img.jpg">
+          <img style="width: 100%; height: 180px" src="images\index2img.jpg" class="img-responsive">
         </div>
         <div class="item">
-          <img src="images\pastopografia.jpg">
+          <img style="width: 100%; height: 180px" src="images\pastopografia.jpg" class="img-responsive">
         </div>
         <div class="item">
-          <img src="images\Maracaibo.jpg">
+          <img style="width: 100%; height: 180px" src="images\Maracaibo.jpg" class="img-responsive">
         </div>
       </div>
     </div>
-
+</div>
+</div>
+</div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
@@ -43,10 +46,12 @@ if (@!$_SESSION['usuario']) {
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-md-10">
+                <div class="col-md-12">
                     <div align='center' >
                         <form method="post" action="factura.php" class="formulario" >
-                            <div>
+
+                            <div class="col-md-6">
+                                <h4 class="text-center">Tipos de vehículos</h4>
                                 <ul class="nav nav-stacked">
                                     <div class="col-md-6">
                                         <li class="active">
@@ -125,17 +130,19 @@ if (@!$_SESSION['usuario']) {
                                             </div>
                                         </li>
                                     </div>
+
                                 </ul>
                             </div>
-                              <br>
-                            <div class="col-md-12">
-                                <iframe src="index.php" height="300" width="500"></iframe>
-                            </div>
-                            <input onclick="texto()" style="margin-top: 10px;" class="btn btn-danger " type="submit" name="imprimir" value="imprimir" disabled="true">
+                               <div class="col-md-6">
+                                <iframe src="recibo.php" height="300" width="500"></iframe>
+                                </div>
+
+                            <input style="margin-left: 560px;" onclick="texto()" style="margin-top: 10px;" class="btn btn-danger " type="submit" name="imprimir" value="imprimir" disabled="true">
 
                         </form>
                     </div>
                 </div>
+
             </div>
         </div>
         <script language="javascript">

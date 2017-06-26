@@ -29,10 +29,10 @@
       $query=mysqli_query($mysqli,$sql);
       echo "<table border='1'; class='table table-hover';>";
         echo "<tr class='warning'>";
-          echo "<td>Id</td>";
-          echo "<td>Monto</td>";
-          echo "<td>Operador (Cedula)</td>";
-          echo "<td>Fecha</td>";
+        echo "<td>Id</td>";
+        echo "<td>Monto</td>";
+        echo "<td>Operador (Cedula)</td>";
+        echo "<td>Fecha</td>";
         echo "</tr>";
        while($arreglo=mysqli_fetch_array($query)){
 

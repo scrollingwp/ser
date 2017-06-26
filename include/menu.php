@@ -1,45 +1,40 @@
 <!DOCTYPE html>
-<?php
-session_start();
-if (@!$_SESSION['usuario']) {
-  header("Location:index.php");
-}
- ?>
+<html>
 <head>
-	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 <style type="text/css">
 
 .sobre a{
-	color:#fff !important;
-	width: 300px;
-	font-weight: bold;
+  color:#fff !important;
+  width: 300px;
+  font-weight: bold;
 }
 
 .sobre span{
-	font-size: 25px;
-	margin-left: 10px;
+  font-size: 25px;
+  margin-left: 10px;
 }
 .navbar-nav{
-	background: #c64949 !important;
-	border-radius: 5px;
+  background: #c64949 !important;
+  border-radius: 5px;
 }
 
 .sobre:hover{
-	transition: 0.5s;
-	background: #892626 !important;
-	border-radius: 5px;
+  transition: 0.5s;
+  background: #892626 !important;
+  border-radius: 5px;
 }
 
 .navbar-default{
-	background: none !important;
-	border: none !important;
+  background: none !important;
+  border: none !important;
 }
 </style>
+<body
 
-
-    <div class="navbar navbar-default navbar-static-top">
+    <center><div class="navbar navbar-default navbar-static-top">
               <div class="container">
                 <div class="navbar-header">
                   <div class="collapse navbar-collapse" id="navbar-ex-collapse">
@@ -53,11 +48,13 @@ if (@!$_SESSION['usuario']) {
                       </li>
                     </ul>
                     <br>
-                    <ul style="margin-left: 500px;" class="nav navbar-left">
+                    <ul style="margin-left: 220px;" class="nav navbar-left">
                     <li style="height:10px"><a class="text-center"  style="color: black;">Bienvenido <strong><?php echo $_SESSION['usuario'];?></strong> </a></li>
                     </ul>
                   </div>
                 </div>
               </div>
-            </div>
-</html>
+            </div></center>
+            <div style="margin-bottom: 100px;"></div>
+            </body>
+            </html>

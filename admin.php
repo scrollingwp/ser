@@ -1,12 +1,4 @@
 <!DOCTYPE html>
-<?php
-session_start();
-if (@!$_SESSION['usuario']) {
-  header("Location:index.php");
-}elseif ($_SESSION['nro_cabina']>=1) {
-  header("Location:index2.php");
-}
-?>
 <html>
 <script>
 function recarga(){
@@ -20,26 +12,32 @@ setInterval('recarga()',200000)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Wilmer Padilla">
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="bootstrap/js/jqueryn.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+
     <link rel="stylesheet" type="text/css" href="css2/botones.css">
   </head>
   <body style="background: #e0e0e0">
-    <div id="carousel-example" data-interval="5000" class="carousel slide" data-ride="carousel">
+     <div  class="container-fluid">
+            <div class="row">
+            <div class="col-md-12">
+         <div id="carousel-example" data-interval="5000" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="item active">
-          <img src="images\index2img.jpg">
+          <img style="width: 100%; height: 180px" src="images\index2img.jpg" class="img-responsive">
         </div>
         <div class="item">
-          <img src="images\pastopografia.jpg">
+          <img style="width: 100%; height: 180px" src="images\pastopografia.jpg" class="img-responsive">
         </div>
         <div class="item">
-          <img src="images\Maracaibo.jpg">
+          <img style="width: 100%; height: 180px" src="images\Maracaibo.jpg" class="img-responsive">
         </div>
       </div>
     </div>
+</div>
+</div>
+</div>
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
@@ -53,63 +51,81 @@ setInterval('recarga()',200000)
           <!--///////////////////////////////////////////////////Empieza cuerpo
           del documento interno////////////////////////////////////////////-->
           <h3 class="text-center" style="padding-bottom: 20px; border-bottom: 2px solid #c64949">Administración</h3>
-          <div class="col-md-12">
-            <div class="col-md-6">
+          <div style="margin-bottom: 40px;" class="col-md-12">
+              <div class="text-center">
+             <label class="">Desde:</label> <input class="" type="date" name="Desde">
+              <label class="">Hasta:</label> <input class="" type="date" name="Hasta">
+              </div>
+          </div>
+          <div class="">
+            <div style="margin-bottom: 40px" class="col-md-6">
               <div class="section">
                 <h4 class="text-center">Reportes
-                  <i class="fa fa-clipboard fa-fw fa-lg"></i>
+                  <span class="glyphicon glyphicon-list-alt"></span>
                 </h4>
-                <ul style="margin-left: 100px;" class="lead nav nav-pills">
-                  <li class="bor">
-                    <a href="exento.php" class="btn btn-default">Exentos</a>
-                  </li>
-                  <li class="bor">
-                    <a href="cierre.php" class="btn btn-default">Cierres</a>
-                  </li>
-                  <li class="bor">
-                    <a href="reporte_total.php" class="btn btn-default">Reporte total</a>
-                  </li>
-                </ul>
+                <div style="margin-left: 100px;" class="lead nav nav-pills">
+                  <div class="bor">
+
+                      <a style="width: 300px" class="btn btn-default " href="exento.php" > Exentos </a>
+                  </div>
+                  <div class="bor">
+                    <a style="width: 300px" class="btn btn-default " href="cierre.php" >Cierres </a>
+                  </div>
+                  <div class="bor">
+                      <a style="width: 300px" class="btn btn-default " href="reporte_total.php" >Reporte Total </a>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="col-md-6">
               <div class="section">
                 <h4 class="text-center">Control de usuarios
-                  <i class="fa fa-child fa-fw fa-lg"></i>
+                 <span class="glyphicon glyphicon-user"></span>
                 </h4>
-                <ul style="margin-left: 120px;" class="nav nav-tabs">
-                  <li class="bor">
-                    <a href="registrar.php" class="btn btn-default">Registrar usuario</a>
-                  </li>
-                  <li class="bor1">
-                    <a href="usuarios.php" class="btn btn-default">Modificar usuario</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="section">
-                <h4 class="text-center">Control de cabinas
-                  <i class="fa fa-desktop fa-fw fa-lg"></i>
-                </h4>
-                <center>
-                  <div class="btn-group btn-group-sm">
-                    <a class="btn btn-default " href="control1.php" > Cabina #1 </a>
-                    <a class="btn btn-default" href="control2.php" > Cabina #2 </span></a>
-                    <a class="btn btn-default " href="control3.php" > Cabina #3 </span></a>
-                    <a class="btn btn-default " href="control4.php"> Cabina #4 </span></a>
-                    <a class="btn btn-default " href="control5.php" style="display:none" > Cabina #5 </span></a>
-                    <a class="btn btn-default " href="control6.php"style="display:none"> Cabina #6 </span></a>
+                <div style="margin-left: 120px;" class="nav nav-tabs">
+                  <div class="bor">
+                    <a href="registrar.php" class="btn btn-default" style="width: 300px">Registrar usuario</a>
                   </div>
-                </center>
+                  <div class="bor1">
+                    <a href="usuarios.php" class="btn btn-default" style="width: 300px">Modificar usuario</a>
+                  </div>
+                </div>
               </div>
             </div>
+            </div>
+        </div>
 
-          </div>
+    </div>
+    </div>
+      <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+           <div class="">
+              <div class="col-md-6">
+                <h4 class="text-center">Control de cabinas
+                  <span class="glyphicon glyphicon-modal-window"></span>
+                </h4>
 
-          <div class="">
-            <div class="col-md-12">
-              <div style="background: #cccccc">
+                  <div>
+                  <div class="col-md-6">
+
+                    <a style="width: 230px" href="control1.php" class="btn btn-default"> Cabina #1 </a><br>
+                    <a style="width: 230px" class="btn btn-default" href="control2.php" > Cabina #2 </a><br>
+                    <a style="width: 230px" class="btn btn-default " href="control3.php" > Cabina #3 </a>
+                    </div>
+                    <div class="col-md-6">
+                    <a style="width: 230px" class="btn btn-default " href="control4.php"> Cabina #4</a><br>
+                    <a style="width: 230px" class="btn btn-default " href="control5.php"  > Cabina #5</a><br>
+                    <a style="width: 230px" class="btn btn-default " href="control6.php"> Cabina #6</a>
+                    </div>
+                  </div>
+
+                  </div>
+
+
+          <div class="col-md-6">
+            <div style="background: #cccccc">
                 <h4 class="text-center">Estado actual de las cabinas</h4>
                 <div class="row-fluid">
                  <?php
@@ -148,16 +164,21 @@ setInterval('recarga()',200000)
       </div>
                 <!--FIN del estado actual de las cabinas-->
               </div>
-            </div>
+            <button class="btn btn-default col-md-12">Consultar</button>
           </div>
+
+
+            </div>
         </div>
       </div>
+    </div>
     </div>
     <style type="text/css">
       footer{
                 text-align:center;
                 border-top: 2px solid red;
                 font-size: 13px;
+                margin-top: 50px;
 
               }
     </style>
@@ -166,5 +187,6 @@ setInterval('recarga()',200000)
     </footer>
     <!-- Placed at the end of the document so the pages load faster -->
 
-
-</body></html>
+<div class="clearfix"></div>
+</body>
+</html>

@@ -6,7 +6,7 @@ if (@!$_SESSION['usuario']) {
 }
  ?>
 <head>
-	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 <style type="text/css">
